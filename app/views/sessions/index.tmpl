@@ -1,0 +1,40 @@
+{{ define "sessions/index.tmpl" }}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Example Gin</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+        <link rel="icon" class="js-site-favicon" href="favicon.ico">
+    </head>
+    <body>
+    <section class="section">
+        <div class="container">
+            <h1 class="title">
+                {{ .title }}
+            </h1>
+            <form method="post" action="/sessions">
+                <div class="field">
+                    <label class="label" for="username">Username</label>
+                    <div class="control">
+                        <input class="input" type="text" placeholder="Username" id="username" name="username" required="true">
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="label" for="password">Password</label>
+                    <div class="control">
+                        <input class="input" type="password" placeholder="Password" id="password" name="password" required="true">
+                    </div>
+                </div>
+                <div class="field is-grouped">
+                    <div class="control">
+                        <button class="button is-link">Sign in</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+    </body>
+</html>
+{{ end }}
